@@ -1,0 +1,36 @@
+// COLORS
+
+$white: white;
+$light-grey: #ececec;
+$black: black;
+
+// FONTS
+
+$Br1816: Brother-1816-Thin; 
+$Br1816i: Brother-1816-Thin-Italic;
+$Br1816b: Brother-1816-Bold;
+$Br1816bi: Brother-1816-Bold-Italic;
+$Am: 'Amiri';
+
+h1, h2, h3 {
+	font-family: $Am;
+	font-weight: normal;
+	font-style: normal;
+}
+
+h4, h5 { 
+	font-family: $Br1816b; 
+	font-weight: normal; 
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+a {
+	font-family: $Br1816;
+	font-size: 11px;
+	letter-spacing: 1px;
+}
+
+// TRANSITIONS
+
+$trans-medium: 0.3s ease-out;
