@@ -2,6 +2,7 @@
 
 $white: white;
 $light-grey: #ececec;
+$transparent-white: rgba(255, 255, 255, 0.9f);
 $black: black;
 
 // FONTS
@@ -11,6 +12,10 @@ $Br1816i: Brother-1816-Thin-Italic;
 $Br1816b: Brother-1816-Bold;
 $Br1816bi: Brother-1816-Bold-Italic;
 $Am: 'Amiri';
+
+$xsm: 10px;
+$sm: 11px;
+$medium: 14px;
 
 h1, h2, h3 {
 	font-family: $Am;
@@ -27,8 +32,15 @@ h4, h5 {
 
 a {
 	font-family: $Br1816;
-	font-size: 11px;
+	font-size: $sm;
 	letter-spacing: 1px;
+	text-decoration: none;
+}
+
+p.sm {
+	font-family: $Br1816i;
+	margin: 0;
+	padding: 0;
 }
 
 // TRANSITIONS

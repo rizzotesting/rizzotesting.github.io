@@ -2,16 +2,52 @@
 
 body {
 	background: $black;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.underline-white {
+	padding-bottom: 3px;
+	border-bottom: 1px solid $white;
+}
+
+.underline-black {
+	border-bottom: 1px solid $white;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.clear {
+	clear: all;
+}
+
+// #BUTTONS
+
+button:active {
+	outline: none;
+	border: none;
+}
+
+.button-close {
+	background: none;
+	border: 1px solid $black;
+	font-family: $Br1816b;
+	font-size: $sm;
+	text-transform: uppercase;
+	padding: 10px 20px;
 }
 
 // #NAV
 
 nav {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100px;
+	@include outer-container;
+	padding: 0 0 20px 0;
 	ul {
 		li {
 			display: inline-block;
@@ -20,16 +56,12 @@ nav {
 			margin: 0 30px 0 0;
 			text-align: left;
 			a {
-				text-decoration: none;
 				margin: 0;
 				display: block;
 				width: 100%;
 				height: 100%;
 				color: $white;
 				transition: $trans-medium;
-				.underline {
-					border-bottom: 1px solid $white;
-				}
 				&:hover {
 					opacity: 0.4;
 				}
@@ -38,8 +70,83 @@ nav {
 	}
 }
 
+.logo {
+	display: block;
+	margin: 10px 0 0 20px;
+	a{
+		display: block;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		font-family: $Br1816b;
+		font-size: 1em;
+		color: $white;
+		transition: $trans-medium;
+		&:hover {
+			opacity: 0.4;
+			cursor: pointer;
+		}
+	}
+}
 
-// #NAV
+
+// #OVERLAY
+
+#overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	min-height: 100vh;
+	background: $transparent-white;
+	z-index: 1000000;
+}
+
+.overlay-container {
+	@include outer-container;
+		.overlay-about, .overlay-event {
+			@include span-columns(8);
+			@include shift(2);
+			.left-info, .right-info {
+				margin: 100px 0 0 0;
+			}
+			.left-info {
+				@include span-columns(7);
+			}
+			.right-info {
+				@include span-columns(4);
+				@include shift(1);
+				@include omega();
+				h5 {
+					text-transform: capitalize;
+					margin: 0;
+					padding: 0;
+				}
+				p {
+					margin: 0 0 20px 0;
+					padding: 0;
+					font-size: $sm;
+				}
+			}
+			.close {
+				@include omega();
+				@include span-columns(12);
+				margin-top: 20px;
+				button {
+					@include span-columns(2);
+					@include shift(5);
+					&:active {
+						outline: none;
+						border: none;
+					}
+				}
+			}
+		}
+}
+
+
+// #FOOTER
 
 footer {
 	position: fixed;
@@ -56,12 +163,11 @@ footer {
 		position: relative;
 		left: 15vw;
 		font-family: $Br1816;
-		font-size: 9px;
-		//letter-spacing: 1px;
+		font-size: $xsm;
 		text-align: center;
 		color: $white;
 		transition: $trans-medium;
-		opacity: 0;
+		//opacity: 0;
 		&:hover {
 			opacity: 1;
 		}
