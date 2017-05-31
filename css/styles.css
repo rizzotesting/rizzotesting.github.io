@@ -194,13 +194,11 @@ nav {
           border: none; }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100vw;
   display: block;
   height: 30px;
-  z-index: 10000; }
+  z-index: 10000;
+  margin-top: 30px; }
   footer .colophon {
     display: block;
     height: 30px;
@@ -218,5 +216,30 @@ footer {
 .notfullheight {
   width: 100vw;
   height: 80vh; }
+
+.spacer {
+  height: 40px;
+  width: 100%;
+}
+
+.vidcontainer {
+  text-align: center;
+}
+
+ #v1, #v2, #v3, #v4, #v5, #vdefault {
+    display: inline-block;
+    width: 200px;
+  }
+
+  #v1:hover, #v2:hover, #v3:hover, #v4:hover, #v5:hover, #vdefault:hover {
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  #v1 img, #v2 img, #v3 img, #v4 img, #v5 img, #vdefault img {
+    width: 200px;
+    height: auto;
+  }
 
 /*# sourceMappingURL=styles.css.map */
